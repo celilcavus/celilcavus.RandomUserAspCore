@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Root
+<div class="container d-flex justify-content-center">
+    <div class="w-50">
+        <img src="@Model.avatar" class="img-top-fluid w-100">
+        <hr>
+        <br>
+        <h4 class="text-center">Full Name : @string.Concat(Model.first_name," ",Model.last_name)</h4>
+        <h4 class="text-center">Email : @Model.email</h4>
+
+
+
+        <div class="d-flex justify-content-center">
+
+
+            <div class="me-1 ms-1">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    User
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">User</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">First Name : @Model.first_name</li>
+                                    <li class="list-group-item">Last Name : @Model.last_name</li>
+                                    <li class="list-group-item">User Name : @Model.username</li>
+                                    <li class="list-group-item">Gender : @Model.gender</li>
+                                    <li class="list-group-item">Phone Number : @Model.phone_number</li>
+                                    <li class="list-group-item">Date of Brith : @Model.date_of_birth</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="ms-1 me-1">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    Adress
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">User</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">City : @Model.address.city</li>
+                                    <li class="list-group-item">Street name : @Model.address.street_name</li>
+                                    <li class="list-group-item">Street Adress : @Model.address.street_address</li>
+                                    <li class="list-group-item">Zip Code : @Model.address.zip_code</li>
+                                    <li class="list-group-item">State : @Model.address.state</li>
+                                    <li class="list-group-item">Country : @Model.address.country</li>
+                                    <li class="list-group-item">Cordinat Lat : @Model.address.coordinates.lat</li>
+                                    <li class="list-group-item">Cordinat Lng : @Model.address.coordinates.lng</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="ms-1 me-1">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                    Employment
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Employment</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Title : @Model.employment.title</li>
+                                    <li class="list-group-item">Key Skill : @Model.employment.key_skill</li>
+                                    <li class="list-group-item">Street name : @Model.address.street_name</li>
+                                    <li class="list-group-item">Creadi Card Number : @Model.credit_card.cc_number</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
